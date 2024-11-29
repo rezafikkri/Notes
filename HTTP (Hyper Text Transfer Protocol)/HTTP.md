@@ -1,3 +1,4 @@
+
 Merupakan protokol untuk melakukan transmisi (pengiriman) hypermedia document, seperti HTML JavaScript, CSS, Image, Audio, Video dan lain-lain, antara satu komputer dengan komputer yang lain. HTTP awalnya didesign untuk komunikasi antara Web Server dan Browser, namun saat ini sering juga digunakan untuk kebutuhan lain.
 
 Intinya HTTP itu adalah hanya sebuah spesifikasi atau aturan.
