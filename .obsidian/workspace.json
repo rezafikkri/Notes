@@ -145,16 +145,27 @@
               "icon": "lucide-list",
               "title": "Outline of HTTP"
             }
+          },
+          {
+            "id": "8e3a5976bd900f38",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 326.5
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -163,7 +174,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a33e74f204af1503",
+  "active": "8e3a5976bd900f38",
   "lastOpenFiles": [
     "HTTP (Hyper Text Transfer Protocol)/HTTP.md",
     "Hutang.md",

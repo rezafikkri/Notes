@@ -2,6 +2,7 @@ Merupakan protokol untuk melakukan transmisi (pengiriman) hypermedia document, s
 
 Intinya HTTP itu adalah hanya sebuah spesifikasi atau aturan.
 
+
 ## Client Server
 
 HTTP mengikuti arsitektur client dan server. Client mengirim HTTP Request untuk meminta atau mengirim informasi ke Server, Server membalasnya dengan HTTP Response dari HTTP Request yang diterima.
@@ -67,7 +68,7 @@ Selanjutnya Server akan memproses Request yang diminta oleh Client tersebut.
 ### Response
 
 Setelah Server memproses HTTP Request yang dikiirim oleh Client, Server akan membalas dengan HTTP Response, HTTP Response biasanya berisikan data yang diminta oleh Client dalam HTTP Request.
-![[Diagram HTTP Flow.png]]
+
 ## HTTP Message
 
 HTTP Request dan HTTP Response, sebenarnya adalah sebuah HTTP Message. HTTP Message memiliki standarisasi format.
