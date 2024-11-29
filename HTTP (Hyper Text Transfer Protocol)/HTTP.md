@@ -72,7 +72,7 @@ Setelah Server memproses HTTP Request yang dikiirim oleh Client, Server akan mem
 ## HTTP Message
 
 HTTP Request dan HTTP Response, sebenarnya adalah sebuah HTTP Message. HTTP Message memiliki standarisasi format.
-
+![Diagram HTTP](https://ik.imagekit.io/rezafikkri/Diagram%20HTTP%20Flow.png?updatedAt=1732871271228)
 ## HTTP Method
 
 | **HTTP Method** | **Keterangan**                                                                                                                                                                                                                                              |
@@ -89,7 +89,7 @@ HTTP Request dan HTTP Response, sebenarnya adalah sebuah HTTP Message. HTTP Mess
 ## URL (Uniform Resource Locator)
 
 Merupakan alamat dari sebuah resource di web.
-
+![Anatomy URL](https://ik.imagekit.io/rezafikkri/Anatomy-URL.svg?updatedAt=1732871271291)
 - **Schema**: mengindikasikan protocol yang perlu digunakan oleh Client,
 - **Authority**: terdiri dari nama Domain dan nomor Port yang dipisahkan dengan titik dua (:)
     - Nama domain nantinya akan ditanyakan ke DNS untuk mendapatkan alamat IP nya, namun juga bisa langsung menggunakan IP jika website tersebut tidak memiliki Domain.
@@ -129,3 +129,16 @@ HTTP Body merupakan data yang bisa dikirim di HTTP request, atau data yang diter
 ### Content-Type
 
 HTTP Body erat kaitannya dengan header key Content-Type. Biasanya agar client dan server mudah mengerti isi dari HTTP Body, HTTP Message akan memiliki header Content-Type, yang berisi informasi tipe data HTTP Body.
+
+## HTTP Caching
+
+Caching adalah menyimpan data di client sampai batas waktu yang sudah ditentukan, sehingga jika client ingin melakukan request resource yang sama, cukup ambil resourcenya di client, tanpa harus meminta ulang ke server.
+
+HTTP Caching sangat cocok dilakukan utnuk resource file static yang jarang berubah, seperti file gambar, audio, video dan lain-lain.
+
+![Diagram HTTP Caching](https://ik.imagekit.io/rezafikkri/HTTP%20Caching%20diagram.png?updatedAt=1732874411133)
+### Header Cache Control
+
+Server ketika meminta agar client melakukan caching, maka HTTP Response perlu menambahkan informasi Cache-Control di header.
+
+Cache-Control berisi seperti berapa lama client bisa menyimpan response tersebut, sehingga tidak perlu meminta ulang ke Server. 
