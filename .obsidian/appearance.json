@@ -1,0 +1,9 @@
+{
+  "theme": "moonstone",
+  "accentColor": "",
+  "interfaceFontFamily": "Inter",
+  "textFontFamily": "Inter",
+  "monospaceFontFamily": "Hack Nerd Font",
+  "showViewHeader": true,
+  "baseFontSize": 18
+}
