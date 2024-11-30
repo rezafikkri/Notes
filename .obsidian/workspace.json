@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9b0d724e8973d5d9",
+        "id": "80825715ec9de7f5",
         "type": "tabs",
         "children": [
           {
-            "id": "91e43b9354a1914a",
+            "id": "4a666720d8f4799b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -177,7 +177,9 @@
   },
   "active": "8e3a5976bd900f38",
   "lastOpenFiles": [
+    "Daftar Judul Artikel.md",
     "LARAVEL Framework/Request Lifecycle.md",
+    "LARAVEL Framework/Folder Structure.md",
     "LARAVEL Framework/Laravel.md",
     "Manport/Old Feature List.md",
     "Manport/New Feature List.md",
@@ -185,14 +187,12 @@
     "Manport/Manport.md",
     "PHP/PHP.md",
     "HTTP (Hyper Text Transfer Protocol)/HTTP.md",
-    "Daftar Judul Artikel.md",
     "Manport",
     "PHP/PHP Standard Recomendation.md",
     "PHP/Fitur Baru PHP8.1.md",
     "PHP/PHP Logging.md",
     "Untitled.canvas",
     "PHP/PHP MVC.md",
-    "LARAVEL Framework/Folder Structure.md",
     "PHP/Nginx with PHP.md",
     "PHP",
     "Hutang.md",
