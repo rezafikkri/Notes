@@ -58,9 +58,9 @@ Untuk header pastikan menambahkannya sebelum kita membuat content. Karena pada s
 
 Merujuk kepada praktik menjalankan lebih dari satu website di dalam satu mesin. Caranya adalah dengan membuat beberapa domain dalam satu server yang sama.
 
-
 ---
 
-:LiNotepadText:  [[PHP MVC]]
-:LiNotepadText:  [[PHP Logging]]
-:note
+:TiNotes:  [[PHP MVC]]
+:TiNotes:  [[PHP Logging]]
+:TiNotes:  [[Fitur Baru PHP8.1]]
+:TiNotes:  [[PHP Standard Recomendation]]

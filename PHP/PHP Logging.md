@@ -76,3 +76,101 @@ public function level(): void
 }
 ...
 ```
+
+Secara default **StreamHandler** mengirim mulai dari level Debug. Ini cocok banget jika di production, misalnya lagi ada masalah level yang dikeluarkan level Debug keatas, lagi enggak ada masalah level yang dikeluarkan level Error keatas saja.
+
+> Dan perlu diingat bahwa cara kerja level itu bertingkat, kita tidak bisa memilih salah satu, ataupun membatasi, misalnya hanya ingin mengirim log level Debug sampai Notice saja, itu tidak bisa. Yang bisa itu, pilih satu level dan hanya level itu dan di atasnya saja yang akan di kirimkan. Misal kita pilih level Info, maka hanya level Info dan level diatasnya saja yang akan di tampilkan.
+
+### Context
+
+Selain mengirimkan log event berupa string, kita juga bisa manmbahkan informasi lainnya berupa array, ketika melakukan logging. Informasi tambahan ini dinamankan context. Biasanya data yang dimasukkan kedalam context ini digunakan untuk tujuan _tracking_. Contoh:
+
+```php
+<?php
+
+...
+$log->info('Success Login', ['username' => 'rezafikkri']);
+...
+```
+
+### Processor
+
+Processor adalah cara lain jika kita ingin menambahkan informasi tambahan ke log event. Jika informasi Context harus kita kirim setiap kali melakukan logging, pada Processor kita bisa membuat class Processor yang akan dieksekusi setiap kali log event dikirim. Atau dengan kata lain, dengan Processor kita hanya perlu membuat informasi tambahannya satu kali, dan nantinya bisa digunakan berkali-kali, berbeda dengan Context, yang mana setiap kali melakukan logging, kita perlu menambahkan berkali-kali secara manual informasi tambahannya.
+
+Untuk membuat Processor kita bisa langsung menggunakan Callable atau membuat class turunan dari ProcessorInterface.
+
+> Tips: Context digunakan jika kita perlu menambahkan informasi tambahan sesifik per-log event, sedangkan Processor digunakan jika kita butuh menambahkan informasi tambahan yang general.
+
+Contoh:
+
+```php
+<?php
+...
+$log->pushProcessor(function ($record) {
+    $record->extra['app_version'] = ['v1.0.0'];
+    return $record;
+});
+...
+```
+
+Sama seperti Handler Processor juga sudah banyak menyediakan class implementasi dari ProcessorInterface, yang bisa kita gunakan sesuai kebutuhan kita. Processor juga sama seperti Handler, bisa ditambahkan lebih dari satu.
+
+Jika seperti contoh di atas, maka artinya Processor akan didaftarkan pada Logger. Selain didaftarkan pada Logger, Processor juga bisa didaftarkan pada spesifik Handler, sehingga nantinya kita bisa menambahkan data extra yang berbeda pada setiap Handler. Berbeda dengan contoh diatas, yang mana Processor akan digunakan oleh semua Handler pada Logger tersebut.
+
+Contoh:
+
+```php
+<?php
+...
+$handler = new StreamHandler('php://stderr');
+$handler->pushProcessor(new GitProcessor());
+$log->pushHandler($handler);
+...
+```
+
+### Resettable Interface
+
+Beberapa Handler dan Processor ada yang menyimpan datanya di memory. Jika proses object Logger mengikuti alur hidup Web Request, hal itu aman-aman saja, karena setelah Web Request selesai semua data akan dihapus dari memory.
+
+Namun jika kita ternyata melakukan pekerjaan yang lama, misalnya long running job, atau kita me-logging banyak data, maka sangat disarankan secara _regular_ (teratur) melakukan reset Handler dan Processor, agar datanya dihapus dari memory. Ini dilakukan untuk menghindari _memory leaks_.
+
+Contoh:
+
+```php
+<?php
+...
+for ($i = 0; $i < 10000; $i++) {
+    $log->info("Loop $i");
+    // setiap 100 kali mengirimkan log event
+    if ($i % 100 == 0) {
+        $log->reset();
+    }
+}
+...
+```
+
+### Formatter
+
+Saat Handler mengirim log event ke tujuan (misal file atau console), Handler akan melakukan proses format log event terlebih dahulu. Setiap Handler biasanya memiliki default Formatter, contohnya StreamHandler menggunakan LineFormatter. Jika ingin membuat Formatter sendiri kita bisa membuat class turunan dari FormatterInterface.
+
+Monolog juga sudah menyediakan banyak implementasi FormatterInterface, kita bisa menggunakannya sesuai kebutuhan kita.
+
+> Formatter tidak bisa lebih dari 1 seperti Processor, jika kita set dua kali, maka dia akan menimpa/mengganti Formatter sebelumnya.
+
+Contoh:
+
+```php
+<?php
+...
+$handler = new StreamHandler('php://stderr');
+$handler->setFormatter(new JsonFormatter());
+
+$log->pushHandler($handler);
+...
+```
+
+### Rotating File Handler
+
+Adalah class turunan dari StreamHandler, tetapi khusus untuk mengirim log event ke file dan juga perbedaanya dengan StreamHandler adalah RotatingFileHandler bisa secara otomatis membuat file baru setiap hari, sehinga semua log tidak akan disimpan di dalam satu file. Ini sangat bermanfaat, karena kadang semakin lama, ukuran file akan semakin besar, sehingga nantinya akan susah untuk membaca file dan mengambil data yang ada di dalamnya. Serta juga dengan RoratingFileHandler memudahkan kita jika ingin menghapus log lama yang sudah tidak digunakan lagi.
+
+Dengan menggunakan RotatingFileHandler kita bisa menyetel, seberapa banyak file yang mau kita _keep_ atau simpan, misalnya kita set 10, maka artinya hanya bisa menyimpan file 10 hari terakhir, jika nantinya sudah di hari yang ke-11, maka file yang paling lama itu akan dihapus. Intinya dia akan mempertahankan file 10 hari terakhir, sisanya akan otomatis dihapus.

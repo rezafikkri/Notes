@@ -6,6 +6,7 @@
     "emojiStyle": "twemoji",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "TiReport",
       "TiProtocol",
       "TiWorldWww",
       "TiBrandPhp",
@@ -40,5 +41,6 @@
     "iconName": "TiBrandPhp",
     "iconColor": "#777bb3"
   },
-  "HTTP (Hyper Text Transfer Protocol)": "TiWorldWww"
+  "HTTP (Hyper Text Transfer Protocol)": "TiWorldWww",
+  "Manport": "TiReport"
 }
