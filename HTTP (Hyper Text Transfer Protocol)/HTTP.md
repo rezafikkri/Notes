@@ -3,7 +3,6 @@ Merupakan protokol untuk melakukan transmisi (pengiriman) hypermedia document, s
 
 Intinya HTTP itu adalah hanya sebuah spesifikasi atau aturan.
 
-
 ## Client Server
 
 HTTP mengikuti arsitektur client dan server. Client mengirim HTTP Request untuk meminta atau mengirim informasi ke Server, Server membalasnya dengan HTTP Response dari HTTP Request yang diterima.
@@ -73,7 +72,10 @@ Setelah Server memproses HTTP Request yang dikiirim oleh Client, Server akan mem
 ## HTTP Message
 
 HTTP Request dan HTTP Response, sebenarnya adalah sebuah HTTP Message. HTTP Message memiliki standarisasi format.
-![Diagram HTTP](https://ik.imagekit.io/rezafikkri/Diagram%20HTTP%20Flow.png?updatedAt=1732871271228)
+
+![Diagram HTTP Flow](https://ik.imagekit.io/rezafikkri/Diagram%20HTTP%20Flow.png?updatedAt=1732871271228)
+<small style="color:gray">Diagram HTTP Flow</small>
+
 ## HTTP Method
 
 | **HTTP Method** | **Keterangan**                                                                                                                                                                                                                                              |
@@ -103,13 +105,13 @@ Merupakan alamat dari sebuah resource di web.
 
 Merupakan informasi tambahan yang biasa dikirim di Request atau Response. HTTP header biasanya digunakan agar informasi tidak harus dikirim melalui Request Body atau Response Body. HTTP Header berisi key : value dan saat ini sudah banyak sekali standarisasi nama key pada HTTP Header.
 
-|**HTTP Header**|**Keterangan**|
-|---|---|
-|Host|Authority pada URL (wajib sejak versi HTTP/1.1)|
-|Content-Type|Tipe data dari HTTP body|
-|User Agent|Informasi user-agent (seperti browser dan system operasi)|
-|Accept|Tipe data yang diterima oleh client|
-|Authorization|Credential untuk autentikasi (misal username + password)|
+| **HTTP Header** | **Keterangan**                                            |
+| --------------- | --------------------------------------------------------- |
+| Host            | Authority pada URL (wajib sejak versi HTTP/1.1)           |
+| Content-Type    | Tipe data dari HTTP body                                  |
+| User Agent      | Informasi user-agent (seperti browser dan system operasi) |
+| Accept          | Tipe data yang diterima oleh client                       |
+| Authorization   | Credential untuk autentikasi (misal username + password)  |
 HTTP Header digunakan sebagai informasi tambahan diluar URL dan Body.
 
 ## HTTP Status

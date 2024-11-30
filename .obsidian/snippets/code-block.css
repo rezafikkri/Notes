@@ -1,0 +1,10 @@
+.code-nowrap pre,
+.code-nowrap code :not(pre) {
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.code-nowrap code[class*="lang"] {
+  overflow-x: auto;
+  white-space: pre;
+}
