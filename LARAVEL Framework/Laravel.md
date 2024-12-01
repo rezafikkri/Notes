@@ -1,7 +1,7 @@
-
 Laravel sendiri membawa konsep MVC (Model View Controller).
 
 ---
 
-[[Folder Structure]]
-[[Request Lifecycle]]
+:TiNotes:  [[Folder Structure]]
+:TiNotes:  [[Request Lifecycle]]
+:TiNotes:  [[Testing]]

@@ -1,4 +1,3 @@
-
 **app**: Tempat menyimpan semua kode program kita
 
 **bootstrap**: Folder ini adalah untuk ketika *Laravel start up*, yang secara umum disebut *bootstraping* dan ini tidak ada kaitannya dengan css framework Bootstrap.

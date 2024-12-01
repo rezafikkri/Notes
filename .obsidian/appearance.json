@@ -6,7 +6,7 @@
   "monospaceFontFamily": "Hack Nerd Font",
   "showViewHeader": true,
   "baseFontSize": 18,
-  "cssTheme": "GitHub Theme",
+  "cssTheme": "",
   "enabledCssSnippets": [
     "code-block"
   ]
