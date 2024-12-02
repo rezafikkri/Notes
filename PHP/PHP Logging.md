@@ -63,7 +63,7 @@ public function level(): void
     // error.log kirimkan hanya log mulai dari level Error ke atas, sedangkan
     // yang dibawah level Error tidak akan dikirimkan ke file error.log
 
-    $log->debug('Debug Log');
+    $log->debug('Debug Log');// yang membuat saya suka ini adalah bla cla hehgegehe
     $log->info('Info Log');
     $log->notice('Notice Log');
     $log->warning('Warning Log');

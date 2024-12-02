@@ -27,3 +27,24 @@ Untuk menjalankan test kita bisa jalankan langsung binary PHPUnit yang ada di ve
 php artisan test
 ```
 
+## Environment
+
+Jika kita menjalankan tests, maka data environment akan diambil dari file `phpunit.xml`, namun jika tidak ada maka akan diambil dari file `.env`. 
+
+## App Environment
+
+Jiak kita butuh untuk mengecel saat ini sedang berada di environment mana (testing, local, prod, dsb) maka kita bisa melakukannya seperti ini:
+
+```php
+<?php
+
+use Illuminate\Support\Facades\App;
+
+if (App::environment('local')) {
+	// The environment is local
+}
+
+if (App::environment(['local', 'staging'])) {
+	// The environment is either local OR staging...
+}
+```
