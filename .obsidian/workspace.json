@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LARAVEL Framework/Configuration Cache.md",
-                "mode": "source",
+                "file": "PHP/PHP Logging.md",
+                "mode": "preview",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Configuration Cache"
+              "title": "PHP Logging"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 290.5,
-    "collapsed": true
+    "width": 290.5
   },
   "right": {
     "id": "695ea9586c6fe054",
@@ -141,10 +140,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LARAVEL Framework/Configuration Cache.md"
+                "file": "PHP/PHP Logging.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Configuration Cache"
+              "title": "Outline of PHP Logging"
             }
           },
           {
@@ -178,22 +177,22 @@
   "active": "8e3a5976bd900f38",
   "lastOpenFiles": [
     "HTTP (Hyper Text Transfer Protocol)/HTTP.md",
-    "LARAVEL Framework/Configuration Cache.md",
-    "LARAVEL Framework/Laravel.md",
     "LARAVEL Framework/Configuration File.md",
     "LARAVEL Framework/Environment Variable.md",
     "LARAVEL Framework/Testing.md",
+    "LARAVEL Framework/Laravel.md",
+    "LARAVEL Framework/Request Lifecycle.md",
+    "LARAVEL Framework/Folder Structure.md",
+    "PHP/PHP Standard Recomendation.md",
+    "PHP/Fitur Baru PHP8.1.md",
+    "PHP/PHP Logging.md",
+    "PHP/PHP MVC.md",
+    "LARAVEL Framework/Configuration Cache.md",
     "LARAVEL Framework/Application Environment.md",
     "Untitled.md",
-    "PHP/PHP Logging.md",
-    "PHP/PHP Standard Recomendation.md",
-    "PHP/PHP MVC.md",
     "Daftar Judul Artikel.md",
     "Hutang.md",
-    "PHP/Fitur Baru PHP8.1.md",
     "PHP/PHP.md",
-    "LARAVEL Framework/Folder Structure.md",
-    "LARAVEL Framework/Request Lifecycle.md",
     "Manport/New Feature List.md",
     "Manport/Old Feature List.md",
     "Manport/Manport.md",

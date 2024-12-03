@@ -10,4 +10,6 @@ Jika file cache sudah dibuat dan kita menambahkan konfigurasi pada di file php y
 php artisan config:clear
 ```
 
-Selain itu juga juga kita hanya akan memanggil function `env` di dalam file konfigurasi yang terdapat di folder `config` saja, karena jika konfigurasi sudah di-cahce maka file `.env` tidak akan di-load, karena itu function `env` hanya akan mengembalikan external environment variable (system-level atau server-level).
+Selain itu juga pastikan kita hanya akan memanggil function `env` di dalam file konfigurasi yang terdapat di folder `config` saja, karena jika konfigurasi sudah di-cahce maka file `.env` tidak akan di-load, karena itu function `env` hanya akan mengembalikan external environment variable (system-level atau server-level).
+
+> Menurut saya function `env` idealnya hanya di panggil di dalam file konfigurasi yang ada di folder `config` saja, kecuali jika memang ada kebutuhan untuk menggunakan function `env` di selain file konfigurasi, maka di production kita harus mengatur environment variablenya di system-level atau server-level.
