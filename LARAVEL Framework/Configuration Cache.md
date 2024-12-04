@@ -1,10 +1,10 @@
-Untuk meningkatkan kecepatan aplikasi kita, kita sebaiknya meng-cache semua file konfigurasi kita ke dalam satu file dengan menggunakan perintah `php artisan config:cache`. Perintah tersebut juga sebaiknya dijalankan ketika dalam proses deployment ke production, tetapi perintah tersebut juga sebaiknya tidak dijalankan ketika sedang development, karena pastinya konfigurasi akan sering berubah.
+Untuk meningkatkan kecepatan aplikasi kita, kita sebaiknya meng-cache semua file konfigurasi kita ke dalam satu file dengan menggunakan perintah `php artisan config:cache`. Perintah tersebut sebaiknya dijalankan ketika dalam proses deployment ke production dan sebaiknya tidak dijalankan ketika sedang development, karena pastinya konfigurasi akan sering berubah.
 
 > Cache adalah tempat penyimpanan sementara dari data dalam sebuah perangkat dan Caching adalah kegiatan menyimpan copy dari data kedalam sebuah cache, sehingga data yang di-cache bisa diakses dengan cepat.
 
 Setelah perintah `php artisan config:cache` dijalankan, maka semua kofigurasi yang ada di folder `config` akan di merge atau dijadikan satu menjadi file `bootstrap/cache/config.php`.
 
-Jika file cache sudah dibuat dan kita menambahkan konfigurasi pada di file php yang terdapat pada folder `config`, konfigurasi baru tersebut tidak akan bisa diakses, karena Laravel akan selalu menggunakan konfigurasi cache jika ada, oleh karena itu kita bisa membuat ulang cachenya, atau jika ingin menghapus cache-nya kita bisa menggunakan perintah:
+Jika file cache sudah dibuat dan kita menambahkan konfigurasi di file php yang terdapat di folder `config`, konfigurasi baru tersebut tidak akan bisa diakses, karena Laravel akan selalu menggunakan konfigurasi cache jika ada, oleh karena itu kita bisa membuat ulang cachenya, atau jika ingin menghapus cache-nya kita bisa menggunakan perintah:
 
 ```bash
 php artisan config:clear

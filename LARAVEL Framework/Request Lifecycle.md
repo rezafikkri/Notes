@@ -4,10 +4,10 @@ Entry point pertama dari aplikasi Laravel adalah file `index.php` yang terdapat 
 
 File ini sengaja disimpan di dalam folder `public` tersendiri, agar file-file kode program lainnya tidak bisa diakses melalui URL.
 
-Jadi ketika request masuk, file `index.php` akan meload definisi autoload dan mengambil sebuah instance dari aplikasi Laravel dari `bootstrap/app.php`. Aksi pertama yang diambil oleh Laravel sendiri adalah membuat sebuah instance dari application atau [service container](https://laravel.com/docs/11.x/container).
+Jadi ketika request masuk, file `index.php` akan meload definisi autoloader yang dibuat oleh Composer dan mengambil sebuah instance dari aplikasi Laravel dari `bootstrap/app.php`. Aksi pertama yang diambil oleh Laravel sendiri adalah membuat sebuah instance dari Application atau [service container](https://laravel.com/docs/11.x/container).
 ## HTTP / Console Kernels
 
-Dari `index.php` request akan dilanjutkan ke class kernel, yaitu HTTP kernel atau Console kernel menggunakan method `handleRequest` atau `handleCommand` dari instance application. HTTP kernel digunakan untuk menangani request berupa HTTP, sedangkan Console kernel digunakan untuk menangani request berupa perintah console.
+Dari `index.php` request akan dilanjutkan ke class kernel, yaitu HTTP kernel atau Console kernel menggunakan method `handleRequest` atau `handleCommand` dari instance Application. HTTP kernel digunakan untuk menangani request berupa HTTP, sedangkan Console kernel digunakan untuk menangani request berupa perintah console.
 
 HTTP kernel mendefinisikan array `bootstrappers` yang akan dijalankan sebelum request dieksekusi. `bootstrappers` ini mengkonfigurasi error handling, logging, mendeteksi environment dan melakukan pekerjaan-pekerjaan lain yang dibutuhkan sebelum request benar-benar di tangani.
 
@@ -39,7 +39,7 @@ Ketika application sudah di bootstrap dan semua service provider sudah di regist
 
 Middleware menyediakan cara yang mudah untuk memfilter request yang masuk ke aplikasi kita. Sebagai contoh laravel menyediakan middleware untuk memverifikasi apakah pengguna sudah login atau belum.
 
-Jika request lolos dari semua middleware, Controller method akan dijalankan dan response yang dikembalikan oleh Controller method akan dikirim kembali melalui middleware, method `handle` HTTP kernel mengembalikan object response tersebut ke method `handleRequest` dari instance application dan method ini memanggil method `send` dari object response yang dikembalikan. Method `send` tersebut mengirim isi response ke browser pengguna.
+Jika request lolos dari semua middleware, Controller method akan dijalankan dan response yang dikembalikan oleh Controller method akan dikirim kembali melalui middleware, method `handle` HTTP kernel mengembalikan object response tersebut ke method `handleRequest` dari instance Application dan method ini memanggil method `send` dari object response yang dikembalikan. Method `send` tersebut mengirim isi response ke browser pengguna.
 
 > Menurut pehaman saya, yang menjalankan semua middleware secara langsung (baik yang disebutkan pada bagian HTTP kernel atau pada bagian Routing) adalah Router, sedangkan HTTP kernel hanya sebatas meneruskan request melalui middleware.
 
