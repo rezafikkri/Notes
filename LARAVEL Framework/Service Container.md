@@ -2,7 +2,7 @@ Sebelumnya kita sudah mencoba melakukan dependency injection secara manual di [[
 
 ## Application Class
 
-Service Container di Laravel direpresentasikan dalam class bernama Application. Application adalah Container atau Manager dari dependency injectionnya. Kita tidak perlu membuat class Application secara manual, karena semua sudah dilakukan secara otomatis oleh Laravel. Di semua project Laravel hampir semua bagian terdapat field `$app` yang merupakan instance dari Application.
+Service Container di Laravel direpresentasikan dalam class bernama Application. Application adalah Container atau Manager dari dependency injectionnya. Kita tidak perlu membuat class Application secara manual, karena semua sudah dilakukan secara otomatis oleh Laravel. Di semua project Laravel hampir semua bagian terdapat property `$app` yang merupakan instance dari Application.
 
 ## Membuat Dependency
 
@@ -17,4 +17,80 @@ $foo2 = $this->app->make(Foo::class); // new Foo
 
 Saat kita menggunakan function `make(key)`, secara otomatis Laravel akan membuat objectnya, namun kadang kita ingin menentukan cara pembuatan objectnya. Misalnya pada object yang kompleks, ada constructor nya ada banyak parameternya.
 
-Pada kasus seperti ini kita bisa menggunakan method `bind(key, closure)`, kita cukup returnkan data yang kita inginkan pada function `closure`nya. Saat kita menggunakan `make(key)` untuk mengambil dependencynya, secara otomatis function `closure` akan dipanggil. Perlu diingat juga bahwa setiap kita memanggil `make(key)` function `closure`nya akan selalu dipanggil, jadi bukan menggunakan object yang sama.
+Pada kasus seperti ini kita bisa menggunakan method `bind(key, closure)`, kita cukup returnkan data yang kita inginkan pada function `closure`nya. Saat kita menggunakan `make(key)` untuk mengambil dependencynya, secara otomatis function `closure` akan dipanggil. Perlu diingat juga bahwa setiap kita memanggil `make(key)`, maka function `closure`nya akan selalu dipanggil, jadi bukan menggunakan object yang sama.
+
+```php
+$this->app->bind(Person::class, function () {
+	return new Person('Reza', 'Sariful Fikri');
+});
+
+$person = $this->app->make(Person::class); // closure() // new Person('Reza', 'Sariful Fikri')
+$person2 = $this->app->make(Person::class); // closure() // new Person('Reza', 'Sariful Fikri')
+```
+
+Dengan kita menggunakan `bind(key, closure)` seperti diatas, kita memberitahu Laravel bahwa jika ada yang ingin membuat object Person, maka jalankan function `closure` tersebut.
+
+## Singleton
+
+Sebelumnya ketika kita menggunakan `make(key)`, maka secara default Laravel akan membuat object baru, atau jika menggunakan `bind(key, closure)`, function closure akan selalu dipanggil.
+
+Kadang ada kebutuhan kita membuat object singleton, yaitu satu object saja dan ketika butuh kita cukup menggunakan object yang sama.
+
+Pada kasus ini kita bisa menggunakan function `singleton(key, closure)`, maka secara otomatis ketika kita menggunakan `make(key)`, maka object hanya dibuat di awal, selanjutnya object yang akan digunakan terus menerus ketika kita memanggil `make(key)`.
+
+```php
+$this->app->singleton(Person::class, function () {
+	return new Person('Reza', 'Sariful Fikri');
+});
+
+$person = $this->app->make(Person::class); // new Person('Reza', 'Sariful Fikri') if not exist
+$person2 = $this->app->make(Person::class); // return existing
+```
+
+## Instance
+
+Selain menggunakan function `singleton(key, closure)`, untuk membuat singleton object, kita juga bisa menggunakan object yang sudah ada, dengan cara menggunakan function `instance(key, object)`. Ketika menggunakan `make(key)`, instance object tersebut akan selalu dikembalikan.
+
+```php
+$person = new Person('Reza', 'Sariful Fikri');
+$this->app->instance(Person::class, $person);
+
+$person1 = $this->app->make(Person::class); // $person
+$person2 = $this->app->make(Person::class); // $person
+```
+
+## Dependency Injection
+
+Sekarang kita tahu bagaimana cara membuat dependency dan mendapatkan dependency di Laravel. Lalu bagaimana cara melakukan dependency injection? secara default jika kita membuat object menggunakan `make(key)`, lalu Laravel mendeteksi terdapat Constructor, maka Laravel akan mencoba menggunakan dependency yang sesuai yang dibutuhkan di constructor tersebut.
+
+Jika tipe yang ada di Constructor itu adalah class, maka Laravel akan secara otomatis meng-inject object dari class tersebut, tetapi jika tipe yang ada di Constructor adalah selain class, misalnya tipe data primitive seperti `string`, `int`, dll atau sebuah `interface`, maka akan terjadi error, karena Laravel tidak mengerti dependency yang dibutuhkan oleh Constructor. Karena itu kita butuh melakukan binding menggunakan `bind(key, closure)`, untuk memberi tahu Laravel bagaimana cara membuat object dari class tersebut.
+
+```php
+$this->app->singleton(Foo::class, function () {
+	return new Foo;
+});
+
+$foo = $this->app->make(Foo::class);
+$bar = $this->app->make(Bar::class);
+```
+
+## Dependency Injection di Closure
+
+Pada function closure kita juga bisa menggunakan parameter `$app` untuk mengambil object yang sudah ada di Service Container. Kadang ini mempermudah kita ketika ingin membuat object yang kompleks.
+
+```php
+$this->app->singleton(Foo::class, function () {
+	return new Foo;
+});
+
+$this->app->singleton(Bar::class, function (Application $app) {
+	return new Bar($app->make(Foo::class));
+});
+
+$foo = $this->app->make(Foo::class);
+$bar1 = $this->app->make(Bar::class);
+$bar2 = $this->app->make(Bar::class);
+```
+
+## Binding Interface ke Class
+

@@ -23,5 +23,7 @@
   "Editor@@bold-color@@light": "#0C0C0C",
   "Editor@@italic-color@@light": "#1A1A1A",
   "Editor@@codeblock-style-select": "codeblock-style-one-dark",
-  "Editor@@editor-grid-background-pattren": false
+  "Editor@@editor-grid-background-pattren": false,
+  "Editor@@table-width-select": "table-width-default",
+  "Editor@@table-width": 100
 }
