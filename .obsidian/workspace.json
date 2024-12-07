@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a59b925276c0e986",
+            "id": "4fd5f0af4d30af41",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -177,8 +177,9 @@
   },
   "active": "8e3a5976bd900f38",
   "lastOpenFiles": [
-    "PHP/PHP Standard Recomendation.md",
     "LARAVEL Framework/Service Container.md",
+    "2024-12-07.md",
+    "PHP/PHP Standard Recomendation.md",
     "LARAVEL Framework/Dependency Injection.md",
     "HTTP (Hyper Text Transfer Protocol)/HTTP.md",
     "LARAVEL Framework/Request Lifecycle.md",

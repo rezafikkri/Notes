@@ -94,3 +94,11 @@ $bar2 = $this->app->make(Bar::class);
 
 ## Binding Interface ke Class
 
+Dalam prakter pengembangan perangkat lunak, **hal yang bagus ketika membuat sebuah class yang berhubungan dengan logic, adalah membuat interface sebagai kontraknya**. Agar nantinya implementasi dari interface bisa lebih dari 1, jadi tidak perlu mengubah-ubah class yang sama. 
+
+Alasan lainnya adalah agar kita bisa dengan mudah menggunakan class-class tersebut, karena walaupun core logic didalam classnya berbeda, tetapi cara menggunakannya sama, karena menerapkan interface yang sama.
+
+Atau alasan yang lain adalah misalnya kita membuat library Export, yang mana bisa meng export ke PDF dan Spreadsheet, agar supaya mudah untuk mengelola kodenya, kita pisah masing-masing ke dalam classnya tersediri, ada class Export, ExportPDF dan ExportSpreadsheet, dimana Export PDF dan ExportSpreadsheet akan digunakan oleh Export. Didalam class Export tentunya kita akan menggunakan Type Hinting, untuk memastikan bahwa object yang dimasukkan adalah benar. Mungkin jika target exportnya hanya 2, kita bisa menggunakan fitur `union`, tetapi bagaimana jika kedepannya ada export-export yang lain? atau bagaimana jika ada orang lain yang ingin berkontribusi untuk membuat tipe export yang lain? pastinya akan sangat merepotkan dan susah untuk mantaince-nya (mengelolah), apalagi jika librarynya sudah besar, karena harus menambahkan class baru di `union` type nya, dan juga jika itu adalah orang lain, kita tidak bisa memastikan bahwa class yang dibuatnya betul sesuai yang dibutuhkan (misalnya method yang kita butuhkan ada atau tidak), atau misalnya kita butuh untuk mengubah nama classnya, atau bahkan menghapus salah satu tipe export, dsb.
+
+Maka dari itu alangkah baiknya kita membuat interface (kontrak) untuk class Export PDF, Export Spreadsheet dll. Sehingga pada class Export, nantinya yang kita jadikan type hinting nya adalah interface tersebut. Sedangkan implementasi dari interface tersebut bisa bermacam-macam.
+
