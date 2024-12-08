@@ -13,5 +13,5 @@ tags:
 
 ---
 
-:TiNotes:  [[Old Feature List]]
-:TiNotes:  [[New Feature List]]
+[[Old Feature List]]
+[[New Feature List]]

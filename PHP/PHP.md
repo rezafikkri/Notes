@@ -60,7 +60,7 @@ Merujuk kepada praktik menjalankan lebih dari satu website di dalam satu mesin. 
 
 ---
 
-:TiNotes:  [[PHP MVC]]
-:TiNotes:  [[PHP Logging]]
-:TiNotes:  [[Fitur Baru PHP8.1]]
-:TiNotes:  [[PHP Standard Recomendation]]
+[[PHP MVC]]
+[[PHP Logging]]
+[[Fitur Baru PHP8.1]]
+[[PHP Standard Recomendation]]

@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LARAVEL Framework/Service Container.md",
-                "mode": "source",
+                "file": "LARAVEL Framework/Service Provider.md",
+                "mode": "preview",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Service Container"
+              "title": "Service Provider"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "closure",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HTTP (Hyper Text Transfer Protocol)/HTTP.md",
+                "file": "LARAVEL Framework/Service Provider.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for HTTP"
+              "title": "Backlinks for Service Provider"
             }
           },
           {
@@ -141,10 +141,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LARAVEL Framework/Service Container.md"
+                "file": "LARAVEL Framework/Service Provider.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Service Container"
+              "title": "Outline of Service Provider"
             }
           },
           {
@@ -178,28 +178,29 @@
   "active": "8e3a5976bd900f38",
   "lastOpenFiles": [
     "LARAVEL Framework/Service Container.md",
+    "LARAVEL Framework/Dependency Injection.md",
+    "PHP/PHP.md",
+    "Manport/Manport.md",
+    "HTTP (Hyper Text Transfer Protocol)/HTTP.md",
+    "LARAVEL Framework/Laravel.md",
+    "LARAVEL Framework/Configuration File.md",
+    "LARAVEL Framework/Folder Structure.md",
+    "LARAVEL Framework/Service Provider.md",
     "2024-12-07.md",
     "PHP/PHP Standard Recomendation.md",
-    "LARAVEL Framework/Dependency Injection.md",
-    "HTTP (Hyper Text Transfer Protocol)/HTTP.md",
     "LARAVEL Framework/Request Lifecycle.md",
-    "LARAVEL Framework/Laravel.md",
     "LARAVEL Framework/Configuration Cache.md",
     "PHP/PHP Logging.md",
-    "LARAVEL Framework/Configuration File.md",
     "LARAVEL Framework/Environment Variable.md",
     "LARAVEL Framework/Testing.md",
-    "LARAVEL Framework/Folder Structure.md",
     "PHP/Fitur Baru PHP8.1.md",
     "PHP/PHP MVC.md",
     "LARAVEL Framework/Application Environment.md",
     "Untitled.md",
     "Daftar Judul Artikel.md",
     "Hutang.md",
-    "PHP/PHP.md",
     "Manport/New Feature List.md",
     "Manport/Old Feature List.md",
-    "Manport/Manport.md",
     "Manport/Untitled.canvas",
     "Manport",
     "Untitled.canvas",

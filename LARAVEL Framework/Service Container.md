@@ -47,6 +47,9 @@ $person = $this->app->make(Person::class); // new Person('Reza', 'Sariful Fikri'
 $person2 = $this->app->make(Person::class); // return existing
 ```
 
+> Kadang-kadang kasusnya, jika kita menggunakan Laravel, kita mungkin akan banyak menggunakan `singleton`.
+<p></p>
+
 ## Instance
 
 Selain menggunakan function `singleton(key, closure)`, untuk membuat singleton object, kita juga bisa menggunakan object yang sudah ada, dengan cara menggunakan function `instance(key, object)`. Ketika menggunakan `make(key)`, instance object tersebut akan selalu dikembalikan.
@@ -92,7 +95,7 @@ $bar1 = $this->app->make(Bar::class);
 $bar2 = $this->app->make(Bar::class);
 ```
 
-## Binding Interface ke Class
+## Binding Interface ke Implementation
 
 Dalam prakter pengembangan perangkat lunak, **hal yang bagus ketika membuat sebuah class yang berhubungan dengan logic, adalah membuat interface sebagai kontraknya**. Agar nantinya implementasi dari interface bisa lebih dari 1, jadi tidak perlu mengubah-ubah class yang sama. 
 
@@ -102,3 +105,14 @@ Atau alasan yang lain adalah misalnya kita membuat library Export, yang mana bis
 
 Maka dari itu alangkah baiknya kita membuat interface (kontrak) untuk class Export PDF, Export Spreadsheet dll. Sehingga pada class Export, nantinya yang kita jadikan type hinting nya adalah interface tersebut. Sedangkan implementasi dari interface tersebut bisa bermacam-macam.
 
+Laravel memiliki fitur binding dari interface ke implementation-nya secara mudah, kita bisa menggunakan function `bind(interface, class)` atau `bind(interface, closure)` dimana closurenya mengembalikan class imlementasinya. Atau bisa juga menggunakan function `singleton(interface, class)` atau `singleton(interface, closure)`.
+
+> Menurut saya kita menggunakan function `closure` adalah ketika class yang ingin dibuat objectnya itu cukup kompleks, misalnya class tersebut membutuhkan dependency berupa string, int, dsb. Maka kita perlu memberitahu Laravel bagaimana cara membuat objectnya menggunakan `closure` . Tetapi misalnya kita hanya perlu binding interface ke class, dimana class tersebut hanya memiliki depndency class lain, atau bahkan tidak memiliki dependency sama sekali, maka tidak perlu menggunakan `closure`.
+
+```php
+// Jika ada yang minta dibikinkan object HelloService, tolong dibuatkannya dalam
+// HelloServiceIndonesian
+$this->app->singleton(HelloService::class, HelloServiceIndonesian::class);
+
+$helloIndo = $this->app->make(HelloService::class);
+```

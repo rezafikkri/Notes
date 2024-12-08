@@ -2,11 +2,19 @@ Laravel sendiri membawa konsep MVC (Model View Controller).
 
 ---
 
-:TiNotes:  [[Folder Structure]]
-:TiNotes:  [[Request Lifecycle]]
-:TiNotes:  [[Testing]]
-:TiNotes:  [[Configuration File]]
-:TiNotes:  [[Configuration Cache]]
-:TiNotes:  [[Dependency Injection]]
-:TiNotes:  [[Service Container]]
+[[Folder Structure]]
+
+[[Request Lifecycle]]
+
+[[Testing]]
+
+[[Configuration File]]
+
+[[Configuration Cache]]
+
+[[Dependency Injection]]
+
+[[Service Container]]
+
+[[Service Provider]]
 

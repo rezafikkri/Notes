@@ -1,6 +1,7 @@
 Dalam pengembangan perangkat lunak ada konsep yang namanya *dependency injection*. Dependecy Injection adalah teknik dimana sebuah object menerima object lain yang dibutuhkan atau istilahnya *dependency*. Dan saat kita membuat object, sering sekali kita membuat object yang butuh object lain.
 
 > Dependency adalah external komponen yang dibutuhkan kode untuk berfungsi dengan baik
+<p></p>
 
 ## Foo dan Bar
 

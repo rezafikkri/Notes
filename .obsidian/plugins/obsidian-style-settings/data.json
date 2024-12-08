@@ -4,10 +4,10 @@
   "Components@@folder-font-bold": false,
   "Components@@file-names-untrim": false,
   "Components@@CTA-BTN-enable": false,
-  "Components@@tab-autohide": false,
+  "Components@@tab-autohide": true,
   "Components@@status-bar-autohide": true,
-  "Components@@nav-header-autohide": false,
-  "Components@@vault-profile-autohide": false,
+  "Components@@nav-header-autohide": true,
+  "Components@@vault-profile-autohide": true,
   "Components@@outline-enhanced": false,
   "Components@@new-tab-btn-select": "new-tab-btn-default",
   "Components@@restored-scrollbars": false,
@@ -25,5 +25,9 @@
   "Editor@@codeblock-style-select": "codeblock-style-one-dark",
   "Editor@@editor-grid-background-pattren": false,
   "Editor@@table-width-select": "table-width-default",
-  "Editor@@table-width": 100
+  "Editor@@table-width": 100,
+  "Editor@@blockquote-background-light": "#f9fafb",
+  "Editor@@inline-code-background-light": "transparent",
+  "Components@@Ribbon-autohide": true,
+  "Components@@tab-title-bar-autohide": false
 }
