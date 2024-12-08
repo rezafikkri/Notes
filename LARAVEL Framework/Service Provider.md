@@ -43,3 +43,57 @@ Kita bisa menggunakan property `bindings` untuk membuat binding, atau menggunaka
 Namun ini hanya untuk kasus sederhana, jika kasusnya kompleks, misalnya pada constructor class tersebut butuh tipe data string, maka tidak bisa menggunakan fitur ini.
 
 ## Deffered Provider
+
+Secara default semua Service Provider akan diload oleh Laravel, baik itu dibutuhkan atau tidak. Nah, jika provider yang kita buat itu hanya meregistrasikan binding dalam Service Container, maka kita bisa menandai sebuah Service Provider agar hanya diload jika benar-benar dibutuhkan dengan menggunakan fitur Deffered Provider yang ada di Laravel.
+
+Kita bisa menandai Service Provider kita dengan implement interface `DefferableProvider`, lalu implement method `provides`, yang mengembalikan binding Service Container yang diregistrasi oleh provider kita.
+
+Dengan fitur ini, Service Provider hanya akan diload ketika class atau interface atau keduanya bisa disebut juga dependency yang kita binding memang dibutuhkan. Setiap ada request baru, maka Service Provider yang sudah Deffered tidak akan diload jika memang tidak dibutuhkan.
+
+```php
+<?php
+
+...
+use Illuminate\Contracts\Support\DeferrableProvider;
+use Illuminate\Support\ServiceProvider;
+
+class FooBarServiceProvider extends ServiceProvider implements DeferrableProvider
+{
+    public array $singletons = [
+        HelloService::class => HelloServiceIndonesian::class,
+    ];
+
+    /**
+     * Register services.
+     */
+    public function register(): void
+    {
+        $this->app->singleton(Foo::class, function () {
+            return new Foo;
+        });
+
+        $this->app->singleton(Bar::class, function (Application $app) {
+            return new Bar($app->make(Foo::class));
+        });
+    }
+
+    /**
+     * Bootstrap services.
+     */
+    public function boot(): void
+    {
+        //
+    }
+
+    public function provides(): array
+    {
+        return [
+            HelloService::class,
+            Foo::class,
+            Bar::class,
+        ];
+    }
+}
+```
+
+Jadi provider yang kita buat seperti contoh diatas hanya akan diload ketika kita misalnya memanggil `Foo::class` atau `Bar::class` atau `HelloService::class`, jika tidak semuanya diantara tiga dependency itu, maka ServiceProvider diatas tidak akan diload.
