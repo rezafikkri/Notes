@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "LARAVEL Framework/Service Provider.md",
-                "mode": "preview",
+                "mode": "source",
                 "backlinks": false,
                 "source": false
               },
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "closure",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -178,6 +178,8 @@
   "active": "8e3a5976bd900f38",
   "lastOpenFiles": [
     "LARAVEL Framework/Service Container.md",
+    "LARAVEL Framework/Service Provider.md",
+    "LARAVEL Framework/Request Lifecycle.md",
     "LARAVEL Framework/Dependency Injection.md",
     "PHP/PHP.md",
     "Manport/Manport.md",
@@ -185,10 +187,8 @@
     "LARAVEL Framework/Laravel.md",
     "LARAVEL Framework/Configuration File.md",
     "LARAVEL Framework/Folder Structure.md",
-    "LARAVEL Framework/Service Provider.md",
     "2024-12-07.md",
     "PHP/PHP Standard Recomendation.md",
-    "LARAVEL Framework/Request Lifecycle.md",
     "LARAVEL Framework/Configuration Cache.md",
     "PHP/PHP Logging.md",
     "LARAVEL Framework/Environment Variable.md",

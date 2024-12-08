@@ -15,9 +15,11 @@ $foo2 = $this->app->make(Foo::class); // new Foo
 
 ## Mengubah Cara Membuat Dependency
 
-Saat kita menggunakan function `make(key)`, secara otomatis Laravel akan membuat objectnya, namun kadang kita ingin menentukan cara pembuatan objectnya. Misalnya pada object yang kompleks, ada constructor nya ada banyak parameternya.
+Saat kita menggunakan function `make(key)`, secara otomatis Laravel akan membuat objectnya, namun kadang kita ingin menentukan cara pembuatan objectnya. Misalnya pada class yang kompleks, yaitu ada constructor nya dan di constructornya butuh banyak parameter, seperti `string`, `integer`, dll.
 
 Pada kasus seperti ini kita bisa menggunakan method `bind(key, closure)`, kita cukup returnkan data yang kita inginkan pada function `closure`nya. Saat kita menggunakan `make(key)` untuk mengambil dependencynya, secara otomatis function `closure` akan dipanggil. Perlu diingat juga bahwa setiap kita memanggil `make(key)`, maka function `closure`nya akan selalu dipanggil, jadi bukan menggunakan object yang sama.
+
+> Kita hanya perlu melakukan binding jika class tersebut bergantung ke sebuah interface (dengan kata lain type-hint di constructornya adalah sebuah interface), atau type-hint di constructor nya adalah tipe data selain classes, misalnya `string`, dll.
 
 ```php
 $this->app->bind(Person::class, function () {

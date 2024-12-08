@@ -19,7 +19,7 @@ Pada intinya tugas dari method `handle` dari HTTP kernel itu sebenarnya simpel, 
 
 Salah satu dari banyak aksi kernel bootstrapping adalah me-load Service provider. Service Provider adalah yang bertanggung jawab melakukan bootstrapping semua component di Laravel, seperti database, queue, validation dan routing component. Sebenarnya semua hal atau detail dari eksekusi request dilakukan oleh si Service Provider.
 
-> Bootstrapping merujuk ke proses inisialisasi (pengisian nilai awal suatu suatu objek pemrograman atau variable)
+> Bootstrapping merujuk ke proses inisialisasi (pengisian nilai awal suatu objek pemrograman atau variable)
 
 Laravel akan melakukan iterasi semua Service Provider, melakukan proses registerasi dan bootstrapping untuk semua Service Provider.
 
