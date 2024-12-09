@@ -1,12 +1,12 @@
-> **Bootstrapped** atau bootstrap di Service Provider pada Laravel adalah meregistrasikan (mendaftarkan) hal-hal, termasuk meregistrasikan Service Container binding, event listeners, middleware dan bahkan routes.
+Service Provider adalah tempat utama dari semua bootstrapping aplikasi Laravel. Aplikasi yang kita buat, maupun semua code service dari Laravel, di bootstrapped melalui Service Provider.
 
-Sekarang kita tahu cara untuk melakukan dependency injection di Laravel, sekarang pertanyaannya apakah ada best practice dimana melakukan dependency injection tersebut?
+Tetapi atap itu Bootstrapped? **Bootstrapped** atau bootstrap di Service Provider pada Laravel adalah meregistrasikan (mendaftarkan) hal-hal, termasuk meregistrasikan Service Container binding, event listeners, middleware dan bahkan routes. Service Provider adalah tempat utama (central place) untuk mengkonfigurasikan aplikasi kita.
+
+Sebelumnya kita sudah tahu cara untuk melakukan dependency injection di Laravel, sekarang pertanyaannya apakah ada best practice dimana melakukan dependency injection tersebut?
 
 Laravel menyediakan fitur bernama Service Provider, dari namanya kita sudah tahu bahwa ini adalah penyedia service atau dependency.
 
 Di dalam Service Provider biasanya kita melakukan registrasi dependency di dalam Service Container, yaitu seperti yang sebelumnya kita lakukan menggunakan method `bind`, `singleton` dsb.
-
-Service Provider adalah tempat utama (central place) untuk mengkonfigurasikan aplikasi kita.
 
 ## Membuat Service Provider
 
@@ -44,7 +44,7 @@ Namun ini hanya untuk kasus sederhana, jika kasusnya kompleks, misalnya pada con
 
 ## Deffered Provider
 
-Secara default semua Service Provider akan diload oleh Laravel, baik itu dibutuhkan atau tidak. Nah, jika provider yang kita buat itu hanya meregistrasikan binding dalam Service Container, maka kita bisa menandai sebuah Service Provider agar hanya diload jika benar-benar dibutuhkan dengan menggunakan fitur Deffered Provider yang ada di Laravel.
+Secara default semua Service Provider akan diload oleh Laravel, baik itu dibutuhkan atau tidak. Nah, jika provider yang kita buat itu hanya meregistrasikan binding dalam Service Container, maka kita bisa menandai Service Provider tersebut agar hanya diload jika benar-benar dibutuhkan dengan menggunakan fitur Deffered Provider yang ada di Laravel.
 
 Kita bisa menandai Service Provider kita dengan implement interface `DefferableProvider`, lalu implement method `provides`, yang mengembalikan binding Service Container yang diregistrasi oleh provider kita.
 
@@ -96,4 +96,4 @@ class FooBarServiceProvider extends ServiceProvider implements DeferrableProvide
 }
 ```
 
-Jadi provider yang kita buat seperti contoh diatas hanya akan diload ketika kita misalnya memanggil `Foo::class` atau `Bar::class` atau `HelloService::class`, jika tidak semuanya diantara tiga dependency itu, maka ServiceProvider diatas tidak akan diload.
+Jadi provider yang kita buat seperti contoh diatas hanya akan diload ketika kita misalnya memanggil `Foo::class` atau `Bar::class` atau `HelloService::class`, jika salah satu diantara tiga dependency itu tidak ada yang dipanggil, maka ServiceProvider diatas tidak akan diload.

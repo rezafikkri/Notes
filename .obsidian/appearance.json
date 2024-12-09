@@ -1,8 +1,8 @@
 {
   "theme": "moonstone",
   "accentColor": "",
-  "interfaceFontFamily": "Inter",
-  "textFontFamily": "Inter",
+  "interfaceFontFamily": "Open Sans",
+  "textFontFamily": "Open Sans",
   "monospaceFontFamily": "Hack Nerd Font",
   "showViewHeader": true,
   "baseFontSize": 18,

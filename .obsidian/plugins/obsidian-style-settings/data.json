@@ -29,5 +29,10 @@
   "Editor@@blockquote-background-light": "#f9fafb",
   "Editor@@inline-code-background-light": "transparent",
   "Components@@Ribbon-autohide": true,
-  "Components@@tab-title-bar-autohide": false
+  "Components@@tab-title-bar-autohide": false,
+  "Editor@@h4-weight": 500,
+  "Editor@@h1-weight": 800,
+  "Editor@@h2-weight": 700,
+  "Editor@@h5-weight": 400,
+  "Editor@@h6-weight": 400
 }

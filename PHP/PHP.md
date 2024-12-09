@@ -50,11 +50,21 @@ Covariance: fitur di php7.4 yang memungkinkan kita membuat return type yang lebi
 
 Contravariance: fitur di php7.4 yang memungkinkan kita membuat parameter type yang lebih tidak spesifik pada child method dari pada yang ada pada parent method.
 
-### HTTP Header
+### Overriding Method
+
+Overriding method terjadi ketika child class mengimplementasikan sebuah method yang sudah ada pada parent class nya. Method yang ada di child class ini akan menggantikan method yang ada pada parent classnya ketika object dari child class tersebut dipanggil. Tujuan dari overriding adalah untuk memberikan implementasi yang spesifik pada class turunan sesuai dengan yang dibutuhkan.
+
+### Aturan Overriding Method
+
+1. Tidak boleh mengubah visibilitas method tersebut
+2. Signature method harus sama dengan yang ada pada parent class, ini termasuk nama method dan parameter yang diharapkan
+3. Return type harus sama dengan yang ada pada parent class
+
+## HTTP Header
 
 Untuk header pastikan menambahkannya sebelum kita membuat content. Karena pada spesifikasi HTTP letak header adalah sebelum content atau body
 
-### Virtual Host
+## Virtual Host
 
 Merujuk kepada praktik menjalankan lebih dari satu website di dalam satu mesin. Caranya adalah dengan membuat beberapa domain dalam satu server yang sama.
 

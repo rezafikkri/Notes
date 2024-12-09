@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 290.5
+    "width": 290.5,
+    "collapsed": true
   },
   "right": {
     "id": "695ea9586c6fe054",
@@ -176,19 +177,19 @@
   },
   "active": "8e3a5976bd900f38",
   "lastOpenFiles": [
-    "LARAVEL Framework/Service Container.md",
+    "LARAVEL Framework/Configuration Cache.md",
+    "LARAVEL Framework/Configuration File.md",
     "LARAVEL Framework/Service Provider.md",
+    "PHP/PHP.md",
+    "LARAVEL Framework/Service Container.md",
     "LARAVEL Framework/Request Lifecycle.md",
     "LARAVEL Framework/Dependency Injection.md",
-    "PHP/PHP.md",
     "Manport/Manport.md",
     "HTTP (Hyper Text Transfer Protocol)/HTTP.md",
     "LARAVEL Framework/Laravel.md",
-    "LARAVEL Framework/Configuration File.md",
     "LARAVEL Framework/Folder Structure.md",
     "2024-12-07.md",
     "PHP/PHP Standard Recomendation.md",
-    "LARAVEL Framework/Configuration Cache.md",
     "PHP/PHP Logging.md",
     "LARAVEL Framework/Environment Variable.md",
     "LARAVEL Framework/Testing.md",
