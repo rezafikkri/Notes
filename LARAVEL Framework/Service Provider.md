@@ -44,11 +44,19 @@ Namun ini hanya untuk kasus sederhana, jika kasusnya kompleks, misalnya pada con
 
 ## Deffered Provider
 
-Secara default semua Service Provider akan diload oleh Laravel, baik itu dibutuhkan atau tidak. Nah, jika provider yang kita buat itu hanya meregistrasikan binding dalam Service Container, maka kita bisa menandai Service Provider tersebut agar hanya diload jika benar-benar dibutuhkan dengan menggunakan fitur Deffered Provider yang ada di Laravel.
+Secara default semua Service Provider yang kita buat akan diload oleh Laravel, baik itu dibutuhkan atau tidak. Nah, jika provider yang kita buat itu hanya meregistrasikan binding dalam Service Container, maka kita bisa menandai Service Provider tersebut agar hanya diload jika benar-benar dibutuhkan dengan menggunakan fitur Deffered Provider yang ada di Laravel.
 
-Kita bisa menandai Service Provider kita dengan implement interface `DefferableProvider`, lalu implement method `provides`, yang mengembalikan binding Service Container yang diregistrasi oleh provider kita.
+Kita bisa menandai Service Provider kita dengan implement interface `DefferableProvider`, lalu implement method `provides`, yang mengembalikan binding Service Container yang diregistrasi oleh provider kita. Setelah itu jangan lupa untuk menjalankan perintah:
 
-Dengan fitur ini, Service Provider hanya akan diload ketika class atau interface atau keduanya bisa disebut juga dependency yang kita binding memang dibutuhkan. Setiap ada request baru, maka Service Provider yang sudah Deffered tidak akan diload jika memang tidak dibutuhkan.
+```bash
+php artisan clear-compiled
+```
+
+untuk menghapus file class yang telah di compile atau instilahnya di cache, seperti file `bootstrap/cache/services.php`, yang mana isi dari file ini adalah kebanyakan service provider. Sehingga nantinya Laravel akan mengenerate file cache yang baru dan Service Provider yang kita buat akan di tambahkan ke bagian **deffered** yang ada pada file tersebut, yang berarti bahwa Service Provider kita akan diload jika memang benar-benar dibutuhkan. Kalau kita tidak menjalankan perintah diatas, Laravel akan menggunakan file cache yang lama, dimana Service Provider yang kita buat itu ada dibagian **eager**, yang berarti akan diload walaupun tidak dibutuhkan (disebut juga *lazy loading* atau *eager loading*) atau dengan kata lain perubahan yang kita buat pada Service Provider kita, yaitu implement interface `DefferableProvider` tidak akan berdampak apa-apa.
+
+> Pada environment testing, semua Service Provider yang kita buat, mau itu yang kita tandai deffered atau tidak, semuanya akan diload.
+
+Dengan fitur ini, Service Provider hanya akan diload ketika class atau interface (atau keduanya bisa disebut juga dependency) yang kita binding memang dibutuhkan. Setiap ada request baru, maka Service Provider yang sudah deffered tidak akan diload jika memang tidak dibutuhkan.
 
 ```php
 <?php
