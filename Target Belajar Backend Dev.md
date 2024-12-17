@@ -1,0 +1,11 @@
+- [x] Menyelesaikan Course PHP di Udemy
+- [ ] Menyelesaikan course laravel di udemy
+- [ ] Belajar Struktur Data
+- [ ] Io Programming (IO file, IO network)
+- [ ] Relational database (mariadb, postgresql)
+- [ ] Advanced Programming (thread, concurency, paralel programming)
+- [ ] Framework (api)
+- [ ] Code Design, Code Quality (design pattern, refactoring)
+- [ ] database non relational (mongodb, redis, firebase, elasticsearch)
+- [ ] System Design (microservices, integration pattern, event driven, loud native)
+- [ ] framework lanjutan (untuk penerapan system design)
