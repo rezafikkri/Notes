@@ -16,6 +16,7 @@ Dalam membuat artikel, buat di branch baru dengan prefix `post-` diikuti dengan 
 - [ ] Buat urutan topik yang tampil di halaman blog detail, sesuai dengan urutan id topic yang ada pada file .md artikel (Solusi: gunakan map pada **topicIds**, replace setiap topik id dengan topik text-nya)
 - [ ] Membuat halaman detail untuk project
 - [ ] Membuat fitur feedback
+- [ ] Menggunakan rehype-highlight untuk syntax higlighting
 
 ## Web Blog Admin
 
@@ -23,6 +24,7 @@ Daftar teknologi:
 1. Menggunakan API Github  
 2. Menggunakan shadcn  
 3. Login dengan github  
-4. Editor menggunakan uiwjs  
+4. Editor menggunakan uiwjs 
+5. jjaisdoioiqiwe0-qweiaosid
   
 Dashboard admin menampilkan jumlah blog, jumlah topik dan projek.
