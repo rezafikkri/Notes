@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LARAVEL Framework/Facades.md",
+                "file": "LARAVEL Framework/Routing.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Facades"
+              "title": "Routing"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 290.5
+    "width": 290.5,
+    "collapsed": true
   },
   "right": {
     "id": "695ea9586c6fe054",
@@ -140,10 +141,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LARAVEL Framework/Facades.md"
+                "file": "LARAVEL Framework/Routing.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Facades"
+              "title": "Outline of Routing"
             }
           },
           {
@@ -174,14 +175,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2111240cad8437e2",
+  "active": "44a70aab353d58a0",
   "lastOpenFiles": [
+    "LARAVEL Framework/Service Provider.md",
+    "LARAVEL Framework/Facades.md",
+    "LARAVEL Framework/Routing.md",
     "LARAVEL Framework/Service Container.md",
     "LARAVEL Framework/Dependency Injection.md",
-    "LARAVEL Framework/Facades.md",
     "Refactor Personal Web, rezafikkri.github.io.md",
     "PHP/PHP.md",
-    "LARAVEL Framework/Service Provider.md",
     "Manport/Notes.md",
     "Manport/New Feature List.md",
     "Target Belajar Backend Dev.md",
@@ -201,7 +203,6 @@
     "LARAVEL Framework/Environment Variable.md",
     "LARAVEL Framework/Testing.md",
     "PHP/Fitur Baru PHP8.1.md",
-    "PHP/PHP MVC.md",
     "Manport/Untitled.canvas",
     "Manport",
     "Untitled.canvas",
