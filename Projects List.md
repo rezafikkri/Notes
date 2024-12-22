@@ -3,3 +3,4 @@
 - [ ] Memperbaiki web Sekolah (menambahkan fitur, supaya bisa memilih semacam theme)
 - [ ] Membuat template admin (**target terdekat: memperbaiki yang open source dan membuat versi untuk dijual**)
 - [ ] Membuat Website jualan produk digital online (Midtrans, notification via email) (template admin sendiri)
+- [ ] Membuat website upload to cloudinary dengan automatic generate url dan preview dari image tersebut.

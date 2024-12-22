@@ -1,4 +1,4 @@
-- [ ] Bagaimana cara kerja Cookie dan Session? (**NOW**)
+- [x] Bagaimana cara kerja Cookie dan Session?
 - [ ] Laravel Request Lifecycle (**next**)
 - [ ] Update Paket NPM dengan Mudah (**next**)
 - [ ] Memperbaiki pengertian CD dan actions/setup node cache pada artikel Deploy With CI/CD (**next**)

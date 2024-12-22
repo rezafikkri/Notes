@@ -77,6 +77,8 @@ HTTP Request dan HTTP Response, sebenarnya adalah sebuah HTTP Message. HTTP Mess
 
 ## HTTP Method
 
+HTTP method adalah seperti kategori dari request, yang digunakan untuk menentukan tujuan dari request tersebut dan apa yang diharapkan jika request berhasil. HTTP method juga bisa diartikan sebagai kumpulan metode yang digunakan untuk berinteraksi dengan sumber daya server.
+
 | **HTTP Method** | **Keterangan**                                                                                                                                                                                                                                              |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | GET             | GET method digunakan untuk melakukan request data. Request menggunkan GET hanya untuk menerima data, bukan untuk mengirim data.                                                                                                                             |
