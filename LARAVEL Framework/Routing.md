@@ -26,6 +26,6 @@ php artisan route:list
 
 ## Fallback Route
 
-Jika kita mengakses halaman yang tidak ada di aplikasi Laravel kita, maka otomatis akan mengembalikan erro 404. Kadang-kadang kita ingin mengubah tampilan error ketika halaman yang diakses tidak ada.
+Jika kita mengakses halaman yang tidak ada di aplikasi Laravel kita, maka otomatis akan mengembalikan error 404. Kadang-kadang kita ingin mengubah tampilan error ketika halaman yang diakses tidak ada.
 
 Pada kasus seperti ini kita bisa menggunakan fallback route, yaitu callback yang akan dieksekusi ketika tidak ada route yang cocok dengan halaman yang diakses. Kita bisa menggunakan function `Route::fallback(closure)`.

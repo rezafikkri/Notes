@@ -23,7 +23,7 @@ Facades adalah sebenarnya class yang menyediakan akses ke dalam dependency yang 
 
 Semua class Facades adalah turunan dari class `Illuminate\Support\Facades\Facade`, class Facade menggunakan magic method yang bernama `__callStatic`, yang mana method tersebut akan di jalankan ketika kita memanggil static method di Facade dan akan meneruskan secara otomatis ke dependency yang ada di Service container. Contoh `Config::get()` sebenarnya akan melakukan pemanggilan method `get()` yang ada di dependency atau object Config di Service Container.
 
-Untuk nama dependency yang terdapat di Container, kita bisa lihat pada method `getFacadeAccessor()` di class Facadenya. Atau sebenarnya method `getFacadeAccessor()` itu mengembalikan nama dari Service Container binding.
+Didalam class Fecade Config atau class-class Fecade yang lain, ada method `getFacadeAccessor()`, yang mana method ini mengembalikan nama dependency yang terdapat di Container, atau bisa disebut nama dari Service Container binding.
 
 ```php
 $config = $this->app->make('config');
