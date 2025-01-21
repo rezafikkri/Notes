@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LARAVEL Framework/Routing.md",
+                "file": "LARAVEL Framework/Static File.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Routing"
+              "title": "Static File"
             }
           }
         ]
@@ -140,10 +140,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LARAVEL Framework/Routing.md"
+                "file": "LARAVEL Framework/Static File.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Routing"
+              "title": "Outline of Static File"
             }
           },
           {
@@ -176,6 +176,8 @@
   },
   "active": "44a70aab353d58a0",
   "lastOpenFiles": [
+    "LARAVEL Framework/Laravel.md",
+    "LARAVEL Framework/Static File.md",
     "LARAVEL Framework/View.md",
     "LARAVEL Framework/Routing.md",
     "PHP/PHP MVC.md",
@@ -185,7 +187,6 @@
     "LARAVEL Framework/Dependency Injection.md",
     "LARAVEL Framework/Facades.md",
     "LARAVEL Framework/Configuration Cache.md",
-    "LARAVEL Framework/Laravel.md",
     "LARAVEL Framework/Folder Structure.md",
     "HTTP (Hyper Text Transfer Protocol)/HTTP.md",
     "Refactor Personal Web, rezafikkri.github.io.md",
@@ -201,7 +202,6 @@
     "Manport/Manport.md",
     "2024-12-07.md",
     "PHP/PHP Standard Recomendation.md",
-    "PHP/PHP Logging.md",
     "Manport/Untitled.canvas",
     "Manport",
     "Untitled.canvas",
