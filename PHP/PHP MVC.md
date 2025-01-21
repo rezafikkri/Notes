@@ -16,7 +16,7 @@ Adalah teknik melakukan penentuan rute dari URL ke file PHP yang akan dieksekusi
 
 ### Path Variable
 
-Atau disebut juga Path Paramter, adalah semacam fitur yang bisa membuat kita menambahkan data pada url. Jadi kalau biasanya ketika ingin mengirim data melalui url, kita akan menggunakan query paramater, namun dalam beberapa kasus data, kita sebaiknya menggunakan Path Variable, seperti:
+Atau disebut juga Path Parameter, adalah semacam fitur yang bisa membuat kita menambahkan data pada url. Jadi kalau biasanya ketika ingin mengirim data melalui url, kita akan menggunakan query paramater, namun dalam beberapa kasus data, kita sebaiknya menggunakan Path Variable, seperti:
 
 `/products/1234fe`
 

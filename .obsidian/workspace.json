@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LARAVEL Framework/Static File.md",
+                "file": "LARAVEL Framework/Route Parameter.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Static File"
+              "title": "Route Parameter"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 290.5
+    "width": 290.5,
+    "collapsed": true
   },
   "right": {
     "id": "695ea9586c6fe054",
@@ -140,10 +141,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LARAVEL Framework/Static File.md"
+                "file": "LARAVEL Framework/Route Parameter.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Static File"
+              "title": "Outline of Route Parameter"
             }
           },
           {
@@ -176,11 +177,12 @@
   },
   "active": "44a70aab353d58a0",
   "lastOpenFiles": [
+    "PHP/PHP MVC.md",
+    "LARAVEL Framework/Route Parameter.md",
     "LARAVEL Framework/Laravel.md",
     "LARAVEL Framework/Static File.md",
     "LARAVEL Framework/View.md",
     "LARAVEL Framework/Routing.md",
-    "PHP/PHP MVC.md",
     "LARAVEL Framework/Testing.md",
     "LARAVEL Framework/Service Provider.md",
     "LARAVEL Framework/Service Container.md",
@@ -201,7 +203,6 @@
     "LARAVEL Framework/Configuration File.md",
     "Manport/Manport.md",
     "2024-12-07.md",
-    "PHP/PHP Standard Recomendation.md",
     "Manport/Untitled.canvas",
     "Manport",
     "Untitled.canvas",

@@ -26,3 +26,6 @@ Laravel sendiri membawa konsep MVC (Model View Controller).
 
 [[View]]
 
+[[Static File]]
+
+[[Route Parameter]]
