@@ -21,3 +21,25 @@ Route::get('/categories/{id}', function (string $categoryId) {
 ## Optional Route Parameter
 
 Laravel juga mendukung parameter route optional, yang artinya parameternya tidak wajib diisi. Untuk membuat sebuah route parameter menjadi optional, kita bisa tambahkan ? (tanda tanya). Namun perlu diingat, jika kita menjadikan route parameter nya optional, maka kita harus menambahkan default value pada parameter di callback atau controller method nya.
+
+```php
+Route::get('/users/{id?}', function (string $userId = '404') {
+    return "Users $userId";
+});
+```
+
+## Routing Conflict
+
+Saat membuat router dengan parameter, kadang terjadi conflict routing. Di Laravel jika terjadi conflict tidak akan menyebabkan error, namun Laravel akan memprioritaskan route yang pertama kali dibuat atau didefinisikan.
+
+```php
+Route::get('/conflict/{user}', function (string $name) {
+    return "Username $name";
+});
+
+Route::get('/conflict/reza', function () {
+    return "Username only for reza";
+});
+```
+
+Pada contoh diatas request akan selalu masuk ke route yang pertama, walaupun yang diakses adalah route `/conflict/reza`. Supaya hasilnya sesuai keinginan kita, diamana kita ingin ketika route yang diakses adalah `/conflict/reza` maka request akan masuk ke route yang kedua, maka route `/conflict/reza` harus berada di atas route `/conflict/{user}`.
