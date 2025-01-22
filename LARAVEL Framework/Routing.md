@@ -12,9 +12,24 @@ Route::get('/rezafikkri', function () {
 });
 ```
 
+### Basic Routing Unit Test
+
+```php
+$this->get('/users/123')
+	->assertOk()
+	->assertSeeText('Users 123');
+```
+
 ## Redirect
 
 Router juga bisa digunakan untuk redirect dari satu halaman ke halaman lain. Kita bisa menggunakan function `Route::redirect(from, to)`.
+
+### Redirect Unit Test
+
+```php        
+$this->get('/youtube')
+	->assertRedirect('/rezafikkri');
+```
 
 ## Melihat Semua Routing
 
