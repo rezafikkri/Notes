@@ -21,3 +21,6 @@ Selanjutnya kita bisa meregistrasikan method Controller tersebut ke Route atau d
 Controller mendukung dependency injection, karena pembuatan object Controller sebenarnya dilakukan Service Container.
 
 Dengan demikian kita bisa menambahkan dependency yang dibutuhkan di Constructor Controller dan secara otomatis Laravel akan mengambil dependency tersebut dari Service Container dan memasukkannya kedalam Controller.
+
+> **Note:** Menurut pemahaman pribadi, sebenarnya ketika kita melakukan binding dependency kita ke container, itu kita bukan melakukan dependency injection, tetapi kita hanya sebatas memberi tahu Laravel bagaimana cara membuat object dependency tersebut, karena mungkin misalnya dependency tersebut cukup kompleks, lebih detail lihat [[Service Container]]. Dan kegiatan melakukan dependency injection itu sudah di lakukan oleh Laravel menggunakan service container, kita tinggal menggunakannya saja.
+
