@@ -1,8 +1,10 @@
 - [x] Bagaimana cara kerja Cookie dan Session?
-- [ ] Laravel Request Lifecycle (**next**)
-- [ ] Update Paket NPM dengan Mudah (**next**)
+- [ ] Update Paket NPM dengan Mudah
 - [ ] Memperbaiki pengertian CD dan actions/setup node cache pada artikel Deploy With CI/CD (**next**)
-- [ ] Array Function di PHP
+- [ ] Array Function di PHP (**next**)
+- [ ] Composer autoload
+- [ ] Integrate AI Codeium with neovim
+- [ ] Dependency Injection
 - [x] String Function di PHP
 - [x] List of wysiwyg editor
 - [x] Create custom wysiwyg like github with uiwjs

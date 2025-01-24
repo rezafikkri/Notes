@@ -22,5 +22,16 @@ Controller mendukung dependency injection, karena pembuatan object Controller se
 
 Dengan demikian kita bisa menambahkan dependency yang dibutuhkan di Constructor Controller dan secara otomatis Laravel akan mengambil dependency tersebut dari Service Container dan memasukkannya kedalam Controller.
 
-> **Note:** Menurut pemahaman pribadi, sebenarnya ketika kita melakukan binding dependency kita ke container, itu kita bukan melakukan dependency injection, tetapi kita hanya sebatas memberi tahu Laravel bagaimana cara membuat object dependency tersebut, karena mungkin misalnya dependency tersebut cukup kompleks, lebih detail lihat [[Service Container]]. Dan kegiatan melakukan dependency injection itu sudah di lakukan oleh Laravel menggunakan service container, kita tinggal menggunakannya saja.
+> **Note:** Menurut pemahaman pribadi, sebenarnya ketika kita melakukan binding dependency kita ke container, itu kita bukan melakukan dependency injection, tetapi kita hanya sebatas memberi tahu Laravel bagaimana cara membuat object dependency tersebut, karena mungkin misalnya dependency tersebut cukup kompleks, lebih detail lihat [[Service Container]]. Dan kegiatan melakukan dependency injection itu di lakukan oleh Laravel sendiri menggunakan service container, kita tinggal menggunakannya saja.
+
+Meskipun dependency injection best practicenya adalah menggunakan constructor, bukan berarti kita tidak bisa melakukannya di method lain, kita bisa melakukannya, tetapi perlu diingat, automatic dependency injection ini hanya bisa dilakukan di fitur-fitur bawaan Laravel saja, seperti di Controller, Middleware, dll. Contoh:
+
+```php
+public function goodMorning(GoodMorningService $goodMorningService, string $name): string
+{
+	return $goodMorningService->goodMorning($name);
+}
+```
+
+Yang perlu menjadi catatan adalah, jika pada Controller method kita juga butuh menerima input dari route parameter, maka pastikan posisi dari parameter-nya adalah setelah dependency lain, seperti pada contoh di atas, walaupun tidak error, tapi sebaiknya kita mengikuti saran yang ada di dokumentasi Laravel.
 
