@@ -37,3 +37,5 @@ Laravel sendiri membawa konsep MVC (Model View Controller).
 [[Request]]
 
 [[Input Type]]
+
+[[Filter Request Input]]
