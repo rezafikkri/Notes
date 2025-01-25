@@ -5,6 +5,7 @@
 - [ ] Composer autoload
 - [ ] Integrate AI Codeium with neovim
 - [ ] Dependency Injection
+- [ ] Automatic Input Type Conversion to Enum in Laravel
 - [x] String Function di PHP
 - [x] List of wysiwyg editor
 - [x] Create custom wysiwyg like github with uiwjs

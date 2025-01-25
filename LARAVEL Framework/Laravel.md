@@ -33,3 +33,7 @@ Laravel sendiri membawa konsep MVC (Model View Controller).
 [[Named Route]]
 
 [[Controller]]
+
+[[Request]]
+
+[[Input Type]]
