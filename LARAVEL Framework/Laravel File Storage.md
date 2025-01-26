@@ -14,7 +14,7 @@ Dan untuk mendapatkan storage atau disk atau lebih tepatnya object dari class im
 
 ## Storage Link
 
-Secara default karena file di simpan di directory `storage/app/`, maka file tidak akan bisa oleh publik. Laravel memliki fitur bernama Storage Link, dimana kita bisa membuat symbolic link dari `public/storage` ke `storage/app/public`. Dengan ini file yang terdapat di `storage/app/public` bisa diakses oleh publik, baik via web dan sebagainya. Untuk membuat symbolic link kita bisa gunakan perintah:
+Secara default karena file di simpan di directory `storage/app/`, maka file tidak akan bisa oleh publik via web. Karena file dan directory yang bisa diakses oleh publik itu hanya yang terdapat dalam directory `public`, maka dari itu kita harus membuat symbolic link dari `public/storage` ke `storage/app/public`, untuk melakukan ini, kita bisa menggunakan fitur di Laravel bernama Storage Link. Dengan ini file ataupun directory yang terdapat di `storage/app/public` bisa diakses oleh publik via web. Untuk membuat symbolic link kita bisa gunakan perintah:
 
 ```bash
 php artisan storage:link
@@ -32,3 +32,5 @@ Kita juga bisa membuat symbolic link sesuai kebutuhan kita di file konfigurasi `
 Key dari array `links` adalah lokasi dari link dan valuenya adalah target dari link tersebut. 
 
 Jadi misal pada contoh diatas, directory `public` yang ada di storage_path >> app akan dibuatkan symbolic link di public_path dengan nama `storage`, storage ini adalah sebuah directory karena public yang ada di storage_path >> app juga sebuah directory, sehingga dengan ini semua file yang ada di directory storage_path >> app >> public akan bisa diakses oleh publik via web, begitu juga dengan link `images`.
+
+Lebih lengkap mengenai symbolic link di linux bisa baca https://www.freecodecamp.org/news/symlink-tutorial-in-linux-how-to-create-and-remove-a-symbolic-link/
