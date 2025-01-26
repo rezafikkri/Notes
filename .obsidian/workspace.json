@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LARAVEL Framework/Filter Request Input.md",
+                "file": "LARAVEL Framework/Laravel File Storage.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Filter Request Input"
+              "title": "Laravel File Storage"
             }
           }
         ]
@@ -141,10 +141,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LARAVEL Framework/Filter Request Input.md"
+                "file": "LARAVEL Framework/Laravel File Storage.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Filter Request Input"
+              "title": "Outline of Laravel File Storage"
             }
           },
           {
@@ -176,8 +176,9 @@
   },
   "active": "44a70aab353d58a0",
   "lastOpenFiles": [
-    "LARAVEL Framework/Laravel.md",
     "LARAVEL Framework/Filter Request Input.md",
+    "LARAVEL Framework/Laravel File Storage.md",
+    "LARAVEL Framework/Laravel.md",
     "Daftar Judul Artikel.md",
     "LARAVEL Framework/Input Type.md",
     "LARAVEL Framework/Controller.md",
@@ -201,7 +202,6 @@
     "LARAVEL Framework/Testing.md",
     "LARAVEL Framework/Facades.md",
     "LARAVEL Framework/Folder Structure.md",
-    "Refactor Personal Web, rezafikkri.github.io.md",
     "Manport/Untitled.canvas",
     "Manport",
     "Untitled.canvas",
