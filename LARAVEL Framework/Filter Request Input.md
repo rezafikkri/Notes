@@ -20,4 +20,4 @@ Kadang-kadang kita butuh untuk menambahkan secara manual input kedalam request.
 
 Untuk melakukan ini kita bisa menggunakan method `$request->merge(array)`, untuk menambahkan input ke request dan jika ada key yang sama, maka data tersebut akan ditimpa dengan argument yang kita masukkan ke method `merge()`.
 
-Atau kita juga bisa menggunakan method `$request->mergeIsMissing(array)`, untuuk menambah input ke request dan jika sudah ada input dengankey yang sama, maka akan di batalkan.
+Atau kita juga bisa menggunakan method `$request->mergeIsMissing(array)`, untuk menambah input ke request dan jika sudah ada input dengan key yang sama, maka akan di batalkan.

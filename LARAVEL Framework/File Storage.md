@@ -4,13 +4,13 @@ Laravel mendukung abstraction untuk management File Storage menggunakan library 
 
 Konfigurasi File Storage di Laravel ada di file `config/filesystems.php`. Kita bisa menambahkan banyak konfigurasi file Storage dan nanti ketika kita akan menyimpan file, kita bisa menentukan File Storage mana yang akan digunakan, apakah itu Local, Amazon S3, Google Cloud Storage dan lain-lain.
 
-Di dalam file tersebut kita bisa mengkonfigurasi semua filesystem "disks", setiap disk driver dan lokasi penyimpanan tertentu. Kita bisa meng-konfigurasikan banyak sebanyak yang kita mau dan bahkan kita juga bisa mengkonfigurasikan banyak disk yang menggunakan driver yang sama, sebagai contoh di dalam file konfigurasi tersebut sudah ada beberapa disk, dua diantaranya adalah `local` dan `public`, dimana kedua disk ini menggunakan driver yang sama yaitu `local`, driver `local` ini digunakan untuk berinteraksi dengan file yang disimpan secara local di server di mana aplikasi Laravel berjalan.
+Di dalam file tersebut kita bisa mengkonfigurasi semua filesystem "disks", setiap disk merepresentasikan driver dan lokasi penyimpanan tertentu. Kita bisa meng-konfigurasikan banyak sebanyak yang kita mau dan bahkan kita juga bisa mengkonfigurasikan banyak disk yang menggunakan driver yang sama, sebagai contoh di dalam file konfigurasi tersebut sudah ada beberapa disk, dua diantaranya adalah `local` dan `public`, dimana kedua disk ini menggunakan driver yang sama yaitu `local`, driver `local` ini digunakan untuk berinteraksi dengan file yang disimpan secara local di server di mana aplikasi Laravel berjalan.
 
 ## FileSystem
 
 Implementasi setiap File Storage di Laravel adalah menggunakan sebuah interface bernama `FileSystem`. Untuk class implementasinya itu tergantung, apakah drivernya local, S3 dan lain-lain. Dan kita sebenarnya juga tidak perlu membuat class impelmentasinya.
 
-Dan untuk mendapatkan storage atau disk atau lebih tepatnya object dari class implementasi dari interace `FileSystem`, kita bisa menggunakan Facade `Storage::disk(namaDisk)`, namaDisk disini adalah `local` atau `s3` atau `public`.
+Dan untuk mendapatkan storage atau disk atau lebih tepatnya object dari class implementasi dari interace `FileSystem`, kita bisa menggunakan Facade `Storage::disk(namaDisk)`, namaDisk disini adalah `local` atau `s3` atau `public` yang mana nama-nama disk tersebut sudah ada secara default di konfigurasi filesystems.
 
 ## Storage Link
 

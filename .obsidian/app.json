@@ -1,5 +1,6 @@
 {
   "spellcheck": false,
   "vimMode": false,
-  "attachmentFolderPath": "./images"
+  "attachmentFolderPath": "./images",
+  "alwaysUpdateLinks": true
 }
