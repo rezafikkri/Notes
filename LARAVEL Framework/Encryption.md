@@ -1,3 +1,5 @@
+>Encryption adalah sebuah proses dimana data (text, password atau file) diubah kedalam format yang tidak bisa dibaca, yang disebut *chipertext*, menggunakan algoritma matematika dan sebuah secret key.
+
 Laravel memiliki abstraction feature untuk melakukan encryption, dengan ini kita tidak perlu melakukan enkrip dan dekrip secara manual.
 
 Untuk melakukan enkripsi Laravel membutuhkan key, dimana key tersebut disimpan di `config/app.php`. Secara default Laravel akan mengambil key tersebut dari environment `APP_KEY`, kita bisa cek di file `.env`.
