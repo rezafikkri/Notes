@@ -158,13 +158,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LARAVEL Framework/Encryption.md",
+                "file": "LARAVEL Framework/Cookie.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Encryption"
+              "title": "Outline of Cookie"
             }
           },
           {
@@ -194,12 +194,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a76e0e57b4629ce8",
+  "active": "44a70aab353d58a0",
   "lastOpenFiles": [
-    "LARAVEL Framework/Encryption.md",
-    "LARAVEL Framework/Cookie.md",
-    "LARAVEL Framework/Laravel.md",
     "LARAVEL Framework/Response.md",
+    "LARAVEL Framework/Cookie.md",
+    "LARAVEL Framework/Encryption.md",
+    "LARAVEL Framework/Laravel.md",
     "PostgreSQL.md",
     "Refactor Personal Web, rezafikkri.github.io.md",
     "Projects List.md",
