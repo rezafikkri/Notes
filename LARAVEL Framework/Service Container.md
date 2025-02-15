@@ -52,7 +52,7 @@ $person2 = $this->app->make(Person::class); // return existing
 > Kadang-kadang kasusnya, jika kita menggunakan Laravel, kita mungkin akan banyak menggunakan `singleton`.
 <p></p>
 
-## Instance
+## Binding Instance
 
 Selain menggunakan function `singleton(key, closure)`, untuk membuat singleton object, kita juga bisa menggunakan object yang sudah ada, dengan cara menggunakan function `instance(key, object)`. Ketika menggunakan `make(key)`, instance object tersebut akan selalu dikembalikan.
 

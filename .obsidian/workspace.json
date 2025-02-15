@@ -8,37 +8,21 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b931780f3c5314d9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "LARAVEL Framework/File Upload.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "File Upload"
-            }
-          },
-          {
             "id": "a76e0e57b4629ce8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LARAVEL Framework/Cookie.md",
+                "file": "LARAVEL Framework/Redirect.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Cookie"
+              "title": "Redirect"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -158,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LARAVEL Framework/Cookie.md",
+                "file": "LARAVEL Framework/Redirect.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Cookie"
+              "title": "Outline of Redirect"
             }
           },
           {
@@ -196,9 +180,14 @@
   },
   "active": "44a70aab353d58a0",
   "lastOpenFiles": [
-    "LARAVEL Framework/Response.md",
+    "LARAVEL Framework/Routing.md",
+    "LARAVEL Framework/Redirect.md",
+    "Daftar Judul Artikel.md",
+    "LARAVEL Framework/Service Container.md",
     "LARAVEL Framework/Cookie.md",
     "LARAVEL Framework/Encryption.md",
+    "LARAVEL Framework/Response.md",
+    "LARAVEL Framework/Untitled",
     "LARAVEL Framework/Laravel.md",
     "PostgreSQL.md",
     "Refactor Personal Web, rezafikkri.github.io.md",
@@ -215,13 +204,9 @@
     "LARAVEL Framework/Filter Request Input.md",
     "LARAVEL Framework/Input Type.md",
     "LARAVEL Framework/Request.md",
-    "Daftar Judul Artikel.md",
     "LARAVEL Framework/Environment Variable.md",
-    "LARAVEL Framework/Service Container.md",
     "LARAVEL Framework/Route Parameter.md",
     "LARAVEL Framework/Named Route.md",
-    "HTTP (Hyper Text Transfer Protocol)/HTTP.md",
-    "LARAVEL Framework/Dependency Injection.md",
     "Manport/Untitled.canvas",
     "Manport",
     "Untitled.canvas",
