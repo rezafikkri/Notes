@@ -47,3 +47,7 @@ Laravel sendiri membawa konsep MVC (Model View Controller).
 [[Response]]
 
 [[Encryption]]
+
+[[Cookie]]
+
+[[Redirect]]
