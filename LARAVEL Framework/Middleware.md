@@ -93,6 +93,7 @@ use App\Http\Middleware\Second;
 })
 ```
 
+Secara default di Laravel terdapat 2 middleware group, yaitu `web` dan `api`. Group middleware `web` akan secara otomatis diterapkan ke file `routes/web.php`, sedangkan group `api` diterapkan ke `routes/api.php` dan penerapakan tersebut dilakukan oleh file `bootstrap/app.php`. ^f0264c
 ## Middleware Parameter
 
 Middleware bisa juga menerima parameter tambahan. Sebagai contoh misalnya pada aplikasi kita ada dua macam role: admin dan operator, kita ingin mengecek apakah user yang sudah login memiliki role yang diperbolehkan untuk menggunakan atau mengakses fitur tertentu, misalnya ada beberapa fitur di aplikasi kita yang hanya user dengan role "admin" yang bisa menggunakannya, maka dari itu kita bisa membuat middleware kita menerima role name sebagai argument tambahan. Untuk membuat itu kita bisa mendefinisikan paremeter tambahan setelah parameter `$next` di method `handle`.

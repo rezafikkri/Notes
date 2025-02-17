@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LARAVEL Framework/Middleware.md",
+                "file": "LARAVEL Framework/CSRF (Cross Site Request Forgery).md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Middleware"
+              "title": "CSRF (Cross Site Request Forgery)"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LARAVEL Framework/Middleware.md",
+                "file": "LARAVEL Framework/CSRF (Cross Site Request Forgery).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Middleware"
+              "title": "Outline of CSRF (Cross Site Request Forgery)"
             }
           },
           {
@@ -180,9 +180,11 @@
   },
   "active": "44a70aab353d58a0",
   "lastOpenFiles": [
+    "LARAVEL Framework/Encryption.md",
+    "LARAVEL Framework/CSRF (Cross Site Request Forgery).md",
+    "LARAVEL Framework/Middleware.md",
     "PHP/PHP MVC.md",
     "Clean Architecture.md",
-    "LARAVEL Framework/Middleware.md",
     "PHP/PHP.md",
     "LARAVEL Framework/Laravel.md",
     "LARAVEL Framework/Redirect.md",
@@ -190,7 +192,6 @@
     "Daftar Judul Artikel.md",
     "LARAVEL Framework/Service Container.md",
     "LARAVEL Framework/Cookie.md",
-    "LARAVEL Framework/Encryption.md",
     "LARAVEL Framework/Response.md",
     "LARAVEL Framework/Untitled",
     "PostgreSQL.md",
@@ -206,7 +207,6 @@
     "LARAVEL Framework/Filter Request Input.md",
     "LARAVEL Framework/Input Type.md",
     "LARAVEL Framework/Request.md",
-    "LARAVEL Framework/Environment Variable.md",
     "Manport/Untitled.canvas",
     "Manport",
     "Untitled.canvas",
