@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LARAVEL Framework/CSRF (Cross Site Request Forgery).md",
+                "file": "LARAVEL Framework/Error Handling.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "CSRF (Cross Site Request Forgery)"
+              "title": "Error Handling"
             }
           }
         ]
@@ -79,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 290.5,
-    "collapsed": true
+    "width": 290.5
   },
   "right": {
     "id": "695ea9586c6fe054",
@@ -142,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LARAVEL Framework/CSRF (Cross Site Request Forgery).md",
+                "file": "LARAVEL Framework/Error Handling.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of CSRF (Cross Site Request Forgery)"
+              "title": "Outline of Error Handling"
             }
           },
           {
@@ -180,9 +179,13 @@
   },
   "active": "44a70aab353d58a0",
   "lastOpenFiles": [
-    "LARAVEL Framework/Encryption.md",
-    "LARAVEL Framework/CSRF (Cross Site Request Forgery).md",
+    "LARAVEL Framework/Session.md",
+    "LARAVEL Framework/Error Handling.md",
+    "LARAVEL Framework/URL Generation.md",
+    "LARAVEL Framework/Route Group.md",
     "LARAVEL Framework/Middleware.md",
+    "LARAVEL Framework/CSRF (Cross Site Request Forgery).md",
+    "LARAVEL Framework/Encryption.md",
     "PHP/PHP MVC.md",
     "Clean Architecture.md",
     "PHP/PHP.md",
@@ -203,10 +206,6 @@
     "PHP/PHP Logging.md",
     "LARAVEL Framework/File Storage.md",
     "LARAVEL Framework/File Upload.md",
-    "LARAVEL Framework/Controller.md",
-    "LARAVEL Framework/Filter Request Input.md",
-    "LARAVEL Framework/Input Type.md",
-    "LARAVEL Framework/Request.md",
     "Manport/Untitled.canvas",
     "Manport",
     "Untitled.canvas",
