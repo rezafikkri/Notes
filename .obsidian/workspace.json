@@ -79,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 290.5,
-    "collapsed": true
+    "width": 290.5
   },
   "right": {
     "id": "695ea9586c6fe054",
@@ -180,8 +179,9 @@
   },
   "active": "44a70aab353d58a0",
   "lastOpenFiles": [
-    "LARAVEL Framework/Session.md",
+    "LARAVEL Framework/HTTP Exception.md",
     "LARAVEL Framework/Error Handling.md",
+    "LARAVEL Framework/Session.md",
     "LARAVEL Framework/URL Generation.md",
     "LARAVEL Framework/Route Group.md",
     "LARAVEL Framework/Middleware.md",
@@ -206,7 +206,6 @@
     "PHP/Fitur Baru PHP8.1.md",
     "PHP/PHP Logging.md",
     "LARAVEL Framework/File Storage.md",
-    "LARAVEL Framework/File Upload.md",
     "Manport/Untitled.canvas",
     "Manport",
     "Untitled.canvas",
