@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "LARAVEL Framework/Error Handling.md",
+                "file": "Resep POC (kol+sawi) 3 liter.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "Error Handling"
+              "title": "Resep POC (kol+sawi) 3 liter"
             }
           }
         ]
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LARAVEL Framework/Error Handling.md",
+                "file": "Resep POC (kol+sawi) 3 liter.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Error Handling"
+              "title": "Outline of Resep POC (kol+sawi) 3 liter"
             }
           },
           {
@@ -179,8 +179,10 @@
   },
   "active": "44a70aab353d58a0",
   "lastOpenFiles": [
-    "LARAVEL Framework/HTTP Exception.md",
+    "Refactor Personal Web, rezafikkri.github.io.md",
+    "Resep POC (kol+sawi) 3 liter.md",
     "LARAVEL Framework/Error Handling.md",
+    "LARAVEL Framework/HTTP Exception.md",
     "LARAVEL Framework/Session.md",
     "LARAVEL Framework/URL Generation.md",
     "LARAVEL Framework/Route Group.md",
@@ -199,13 +201,11 @@
     "LARAVEL Framework/Response.md",
     "LARAVEL Framework/Untitled",
     "PostgreSQL.md",
-    "Refactor Personal Web, rezafikkri.github.io.md",
     "Projects List.md",
     "Target Belajar Backend Dev.md",
     "PHP/PHP Standard Recomendation.md",
     "PHP/Fitur Baru PHP8.1.md",
     "PHP/PHP Logging.md",
-    "LARAVEL Framework/File Storage.md",
     "Manport/Untitled.canvas",
     "Manport",
     "Untitled.canvas",
