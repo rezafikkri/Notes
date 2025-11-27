@@ -4,4 +4,4 @@ Sebaiknya tidak digunakan:
 2. Halaman dengan dynamic route: seperti halaman edit
 
 Sebaiknya digunakan:
-1. Jika halaman itu static route, maka harus revalidatePath, baik itu halaman edit itu sendiri (jika ini dihalaman edit), atau halaman lain yang menggunakan data yang sama. Walaupun halaman itu dynamic rendering dan kamu tidak menggunakan Data Caching, tetap saja ada kemungkinan menampilkan data lama yang ada di Client Router Cache.
+1. Jika halaman itu static route, maka harus revalidatePath, baik itu halaman edit itu sendiri (jika ini dihalaman edit), atau halaman lain yang menggunakan data yang sama. Walaupun halaman itu dynamic rendering dan kamu tidak menggunakan Data Caching, tetap saja ada kemungkinan menampilkan data lama yang ada di Client Router Cache. test
