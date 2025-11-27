@@ -6,11 +6,11 @@
     "emojiStyle": "twemoji",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "TiBrandNextjs",
       "TiReport",
       "TiProtocol",
       "TiWorldWww",
-      "TiBrandPhp",
-      "TiBrandLaravel"
+      "TiBrandPhp"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -43,5 +43,6 @@
     "iconColor": "#777bb3"
   },
   "HTTP (Hyper Text Transfer Protocol)": "TiWorldWww",
-  "Manport": "TiReport"
+  "Manport": "TiReport",
+  "Next.js": "TiBrandNextjs"
 }
