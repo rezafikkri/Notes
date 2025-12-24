@@ -1,14 +1,14 @@
 ## Basic Rules
 
-| Element | Style | Examples |
-|---------|-------|----------|
-| Buttons | Title Case | `Create Product`, `Save Changes`, `Sign In` |
-| Labels | Title Case | `Email Address`, `First Name`, `Product Category` |
-| Page Titles | Title Case | `User Settings`, `Product Details` |
-| Table Headers | Title Case | `Product Name`, `Created At`, `Status` |
-| Dropdown Menu | Sentence case | `Edit profile`, `Delete item`, `View details` |
-| Checkbox/Radio | Sentence case | `Remember me`, `Send notifications` |
-| Toast/Alerts | Sentence case | `Product created successfully` |
+| Element        | Style         | Examples                                          |
+| -------------- | ------------- | ------------------------------------------------- |
+| Buttons        | Sentence Case | `Create product`, `Save changes`, `Sign in`       |
+| Labels         | Title Case    | `Email Address`, `First Name`, `Product Category` |
+| Page Titles    | Title Case    | `User Settings`, `Product Details`                |
+| Table Headers  | Title Case    | `Product Name`, `Created At`, `Status`            |
+| Dropdown Menu  | Sentence case | `Edit profile`, `Delete item`, `View details`     |
+| Checkbox/Radio | Sentence case | `Remember me`, `Send notifications`               |
+| Toast/Alerts   | Sentence case | `Product created successfully`                    |
 
 ## Title Case
 
